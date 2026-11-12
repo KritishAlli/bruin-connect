@@ -4,7 +4,7 @@
 
 Bruin Connect is a web app for UCLA students to post and discover low-stakes, real-time plans around campus: "Anyone want to grab dinner at Bplate at 6?", "Looking for a lifting partner at Wooden at 4pm", "Study group at Powell tonight, 2 spots open."
 
-This is also a **team learning project**. The goal is for everyone to come away with real experience building a full-stack web app *as a group*: using Git branches, pull requests, code review, issue tracking, and short sprints. Shipping something we'd actually use is the bonus.
+This is also a **team learning project**. The goal is for everyone to come away with real experience building a full-stack web app _as a group_: using Git branches, pull requests, code review, issue tracking, and short sprints. Shipping something we'd actually use is the bonus.
 
 ---
 
@@ -34,13 +34,13 @@ Plenty of students want company for everyday things: eating, working out, studyi
 
 ## Core Concepts
 
-| Term | Meaning |
-|------|---------|
-| **Post** | A plan someone wants company for. Has an activity, a location, a time, and an optional cap on how many people can join. |
-| **Location** | A known campus spot: dining halls, gyms, libraries, etc. Posts are browsed by location. |
-| **Category** | The type of activity: 🍽️ Food, 🏋️ Fitness, 📚 Study, 🎉 Social, ⚽ Sports, ✨ Other. |
-| **Join** | A user signaling "I'm in." The poster sees who joined. |
-| **Expiry** | Posts disappear automatically after their start time passes, so the feed always shows what's coming up. |
+| Term         | Meaning                                                                                                                 |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| **Post**     | A plan someone wants company for. Has an activity, a location, a time, and an optional cap on how many people can join. |
+| **Location** | A known campus spot: dining halls, gyms, libraries, etc. Posts are browsed by location.                                 |
+| **Category** | The type of activity: 🍽️ Food, 🏋️ Fitness, 📚 Study, 🎉 Social, ⚽ Sports, ✨ Other.                                    |
+| **Join**     | A user signaling "I'm in." The poster sees who joined.                                                                  |
+| **Expiry**   | Posts disappear automatically after their start time passes, so the feed always shows what's coming up.                 |
 
 ### Seed Locations
 
@@ -58,6 +58,7 @@ Start with a fixed list (we can add more later):
 The MVP is the **smallest thing that's actually useful**. We ship this first, then iterate.
 
 ### ✅ In scope (MVP)
+
 - Sign up / log in with a **UCLA email** (`@ucla.edu` / `@g.ucla.edu` only)
 - Create a post: title, category, location, date/time, optional description, optional max group size
 - Browse a feed of upcoming posts
@@ -70,6 +71,7 @@ The MVP is the **smallest thing that's actually useful**. We ship this first, th
 - Mobile-friendly layout (most people will use this on their phone)
 
 ### 🚫 Out of scope (for now)
+
 - In-app chat/DMs (posts can include a contact method, e.g. Instagram handle)
 - Push notifications
 - Native mobile apps
@@ -80,28 +82,33 @@ The MVP is the **smallest thing that's actually useful**. We ship this first, th
 
 ## User Stories
 
-These map directly to GitHub Issues. Format: *As a [user], I want [action] so that [benefit].*
+These map directly to GitHub Issues. Format: _As a [user], I want [action] so that [benefit]._
 
 **Auth & Profile**
+
 - As a student, I want to sign in with my UCLA email so that only Bruins are on the app.
 - As a user, I want to set a display name and year so that others know who they're meeting.
 
 **Posting**
+
 - As a user, I want to create a post with a location and time so that others can join my plan.
 - As a poster, I want to set a max group size so that my dinner doesn't turn into 15 people.
 - As a poster, I want to edit or delete my post if plans change.
 
 **Discovering**
+
 - As a user, I want to see all upcoming posts sorted by time so that I can find something to do soon.
 - As a user, I want to filter by location (e.g. only Wooden) so that I see what's near me.
 - As a user, I want to filter by category (e.g. only Food) so that I find what I'm in the mood for.
 
 **Joining**
+
 - As a user, I want to join a post so that the poster knows I'm coming.
 - As a user, I want to leave a post I joined if I can't make it.
 - As a poster, I want to see who joined my post.
 
 **Safety**
+
 - As a user, I want to report a post that's inappropriate so that the app stays a good space.
 
 ---
@@ -110,14 +117,14 @@ These map directly to GitHub Issues. Format: *As a [user], I want [action] so th
 
 Chosen to be **beginner-friendly, free to host, and widely used in industry**, so the skills transfer.
 
-| Layer | Choice | Why |
-|-------|--------|-----|
-| Framework | [Next.js](https://nextjs.org/) (App Router) + **TypeScript** | One codebase for frontend and backend; huge community; types catch bugs early |
-| Styling | [Tailwind CSS](https://tailwindcss.com/) | Fast to build with, consistent design, no CSS file sprawl |
-| Database + Auth | [Supabase](https://supabase.com/) (Postgres) | Free tier, built-in email auth, real SQL, nice dashboard |
-| Hosting | [Vercel](https://vercel.com/) | Free, auto-deploys every PR to a preview URL |
-| Linting/Formatting | ESLint + Prettier | Keeps code style consistent across contributors |
-| Testing | Vitest (unit) + Playwright (stretch) | Lightweight, modern |
+| Layer              | Choice                                                          | Why                                                                           |
+| ------------------ | --------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Framework          | [Next.js 16](https://nextjs.org/) (App Router) + **TypeScript** | One codebase for frontend and backend; huge community; types catch bugs early |
+| Styling            | [Tailwind CSS](https://tailwindcss.com/)                        | Fast to build with, consistent design, no CSS file sprawl                     |
+| Database + Auth    | [Supabase](https://supabase.com/) (Postgres)                    | Free tier, built-in email auth, real SQL, nice dashboard                      |
+| Hosting            | [Vercel](https://vercel.com/)                                   | Free, auto-deploys every PR to a preview URL                                  |
+| Linting/Formatting | ESLint + Prettier                                               | Keeps code style consistent across contributors                               |
+| Testing            | Vitest (unit) + Playwright (stretch)                            | Lightweight, modern                                                           |
 
 > **Not set in stone.** If the team strongly prefers something else (e.g. Firebase, or a separate Express backend), raise it in the kickoff meeting. We'll decide once and commit.
 
@@ -196,10 +203,9 @@ bruin-connect/
 
 ## Getting Started
 
-> These steps will be finalized once the project is scaffolded in Sprint 0.
-
 ### Prerequisites
-- [Node.js](https://nodejs.org/) 20+
+
+- [Node.js](https://nodejs.org/) 20.9+ (22 LTS recommended)
 - [Git](https://git-scm.com/)
 - A GitHub account (added as a collaborator on this repo)
 - Access to the team Supabase project (ask the PM)
@@ -208,7 +214,7 @@ bruin-connect/
 
 ```bash
 # 1. Clone the repo
-git clone <repo-url>
+git clone https://github.com/KritishAlli/bruin-connect.git
 cd bruin-connect
 
 # 2. Install dependencies
@@ -223,6 +229,18 @@ npm run dev
 # Open http://localhost:3000
 ```
 
+### Useful scripts
+
+| Command                | What it does                                                    |
+| ---------------------- | --------------------------------------------------------------- |
+| `npm run dev`          | Start the dev server with hot reload                            |
+| `npm run build`        | Production build (run this before opening a PR to catch errors) |
+| `npm run lint`         | Check code with ESLint                                          |
+| `npm run format`       | Auto-format everything with Prettier                            |
+| `npm run format:check` | Check formatting without changing files                         |
+
+> 💡 Install the **ESLint**, **Prettier**, and **Tailwind CSS IntelliSense** extensions in VS Code and turn on _Format on Save_.
+
 ---
 
 ## How We Work
@@ -230,11 +248,13 @@ npm run dev
 This section matters as much as the code. Following it is how we get real team-dev experience.
 
 ### 1. Everything starts as an Issue
+
 - All work is tracked in **GitHub Issues** and organized on the **GitHub Projects board** (`Backlog → To Do → In Progress → In Review → Done`).
-- Before you start something, **assign the issue to yourself** and move it to *In Progress*.
+- Before you start something, **assign the issue to yourself** and move it to _In Progress_.
 - Issues labeled `good first issue` are intentionally small; grab one if you're new.
 
 ### 2. Branching
+
 - **Never commit directly to `main`.** `main` should always work.
 - Create a branch per issue, named `<type>/<issue#>-<short-description>`:
   ```
@@ -244,7 +264,9 @@ This section matters as much as the code. Following it is how we get real team-d
   ```
 
 ### 3. Commits
+
 Use clear, present-tense messages (loosely following [Conventional Commits](https://www.conventionalcommits.org/)):
+
 ```
 feat: add location filter to feed
 fix: hide posts after start time passes
@@ -252,6 +274,7 @@ docs: update setup steps in README
 ```
 
 ### 4. Pull Requests
+
 - Open a PR into `main` when your work is ready (or a **Draft PR** early if you want feedback).
 - Link the issue in the description: `Closes #12`.
 - Include **screenshots** for any UI change.
@@ -260,20 +283,24 @@ docs: update setup steps in README
 - Delete your branch after merging.
 
 ### 5. Code Review Etiquette
+
 - Review within **48 hours** when you're requested.
 - Be kind and specific. Ask questions ("What happens if `max_people` is null here?") rather than make demands.
 - Prefix optional suggestions with `nit:`.
 - Reviewing is one of the best ways to learn the codebase, so everyone reviews, not just the most experienced people.
 
 ### 6. Meetings
-| Meeting | When | Length | Purpose |
-|---------|------|--------|---------|
-| Sprint Planning | Start of each sprint | 45 min | Pick issues for the next 2 weeks |
-| Async Standup | 3x/week in group chat | 2 min | *What I did / what I'm doing / any blockers* |
-| Demo + Retro | End of each sprint | 45 min | Show what we built; discuss what to improve |
+
+| Meeting         | When                  | Length | Purpose                                      |
+| --------------- | --------------------- | ------ | -------------------------------------------- |
+| Sprint Planning | Start of each sprint  | 45 min | Pick issues for the next 2 weeks             |
+| Async Standup   | 3x/week in group chat | 2 min  | _What I did / what I'm doing / any blockers_ |
+| Demo + Retro    | End of each sprint    | 45 min | Show what we built; discuss what to improve  |
 
 ### 7. Definition of Done
+
 An issue is **Done** when:
+
 - [ ] Code is merged into `main`
 - [ ] It works on mobile and desktop widths
 - [ ] No lint errors
@@ -287,15 +314,17 @@ An issue is **Done** when:
 Two-week sprints. Dates are targets, not deadlines; we adjust at each retro.
 
 ### 🏁 Sprint 0: Setup (Week 1)
+
 - [ ] Kickoff meeting: confirm stack, roles, meeting times
-- [ ] Scaffold Next.js + TypeScript + Tailwind app
-- [ ] Set up ESLint, Prettier, and `.env.example`
+- [x] Scaffold Next.js + TypeScript + Tailwind app
+- [x] Set up ESLint, Prettier, and `.env.example`
 - [ ] Create Supabase project and initial schema migration
 - [ ] Seed the `locations` table
 - [ ] Connect Vercel for preview deploys
 - [ ] Every team member opens and merges one tiny PR (e.g. add your name to [Contributors](#contributors)), to practice the workflow
 
 ### 🧱 Sprint 1: Foundations (Weeks 2–3)
+
 - [ ] UCLA-email-only sign up / log in
 - [ ] Profile setup page
 - [ ] Navbar + base layout + design tokens (colors, fonts)
@@ -303,6 +332,7 @@ Two-week sprints. Dates are targets, not deadlines; we adjust at each retro.
 - [ ] Basic feed listing upcoming posts
 
 ### 🔗 Sprint 2: Core Loop (Weeks 4–5)
+
 - [ ] Post detail page
 - [ ] Join / leave post (respecting `max_people`)
 - [ ] Edit / delete own posts
@@ -310,6 +340,7 @@ Two-week sprints. Dates are targets, not deadlines; we adjust at each retro.
 - [ ] Auto-hide expired posts
 
 ### 🚀 Sprint 3: Polish & Launch (Weeks 6–7)
+
 - [ ] Report a post
 - [ ] Empty states, loading states, error messages
 - [ ] Mobile polish pass
@@ -317,6 +348,7 @@ Two-week sprints. Dates are targets, not deadlines; we adjust at each retro.
 - [ ] Soft launch to friends and collect feedback
 
 ### 🌟 Stretch Goals (post-MVP)
+
 - 🗺️ **Map view** of campus with live post pins
 - 🔔 Notifications when someone joins your post
 - 💬 Simple comment thread on posts
@@ -331,14 +363,14 @@ Two-week sprints. Dates are targets, not deadlines; we adjust at each retro.
 
 Everyone should touch **both** frontend and backend over the course of the project. Workstreams are "home bases," not silos, and we'll rotate at least once.
 
-| Workstream | Focus | Owner(s) |
-|------------|-------|----------|
-| **Auth & Users** | Login, UCLA email restriction, profiles | _TBD_ |
-| **Posts & Feed** | Create/edit/delete posts, feed, filters | _TBD_ |
-| **Joining & Social** | Join/leave, member lists, reports | _TBD_ |
-| **UI / Design System** | Layout, components, mobile, accessibility | _TBD_ |
-| **DevOps & Data** | Supabase schema, migrations, Vercel, CI | _TBD_ |
-| **Product / PM** | Backlog, sprint planning, reviews, unblocking | _PM_ |
+| Workstream             | Focus                                         | Owner(s) |
+| ---------------------- | --------------------------------------------- | -------- |
+| **Auth & Users**       | Login, UCLA email restriction, profiles       | _TBD_    |
+| **Posts & Feed**       | Create/edit/delete posts, feed, filters       | _TBD_    |
+| **Joining & Social**   | Join/leave, member lists, reports             | _TBD_    |
+| **UI / Design System** | Layout, components, mobile, accessibility     | _TBD_    |
+| **DevOps & Data**      | Supabase schema, migrations, Vercel, CI       | _TBD_    |
+| **Product / PM**       | Backlog, sprint planning, reviews, unblocking | _PM_     |
 
 ---
 
@@ -372,9 +404,9 @@ To discuss at kickoff. Add yours via a PR!
 _Add yourself here as your first PR!_
 
 | Name | GitHub | Workstream |
-|------|--------|------------|
-| | | |
+| ---- | ------ | ---------- |
+|      |        |            |
 
 ---
 
-*Built by Bruins, for Bruins. Go Bruins! 💙💛*
+_Built by Bruins, for Bruins. Go Bruins! 💙💛_
