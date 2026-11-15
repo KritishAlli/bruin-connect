@@ -405,7 +405,7 @@ _Add yourself here as your first PR!_
 
 | Name | GitHub | Workstream |
 | ---- | ------ | ---------- |
-|      |        |            |
+| Tu Luong | tu99l | Auth & Users |
 
 ---
 
