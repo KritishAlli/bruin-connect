@@ -405,6 +405,7 @@ _Add yourself here as your first PR!_
 
 | Name | GitHub | Workstream |
 | ---- | ------ | ---------- |
+| Janice Lau | janjan1512 | DevOps & Data |
 | Tu Luong | tu99l | Auth & Users |
 
 ---
